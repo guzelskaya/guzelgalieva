@@ -1,7 +1,6 @@
 package com.su.lab;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
 public class CipherTextWrapperStorageImpl implements CipherTextWrapperStorage {
 
@@ -21,9 +20,14 @@ public class CipherTextWrapperStorageImpl implements CipherTextWrapperStorage {
 
     @Override
     public CipherTextWrapper getCipherTextWrapper(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_FILE_NAME, Context.MODE_PRIVATE);
-        String cipherText = sharedPreferences.getString(PIN_KEY, null);
-        String initializationVector = sharedPreferences.getString(PIN_IV_KEY, null);
+        String cipherText = null;
+        String initializationVector = null;
+        /*
+         *  TODO #2 Реализовать получение шифр. текста cipherText и вектора инициализации initializationVector
+         *    из SharedPreferences, используя ключи PIN_KEY и PIN_IV_KEY, название файла SharedPreference SHARED_PREF_FILE_NAME
+         *    https://www.fandroid.info/sharedpreferences-sohranenie-dannyh-v-postoyannoe-hranilishhe-android/
+         *
+         */
         if (cipherText == null || initializationVector == null) {
             return null;
         }

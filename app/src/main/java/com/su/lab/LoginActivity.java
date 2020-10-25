@@ -70,7 +70,7 @@ public class LoginActivity extends Activity {
         boolean isSamePassword = decrypted.equals(password);
         if (isSamePassword) {
             /*
-             *  TODO #2 Открыть MainActivity через Intent
+             *  TODO #3 Открыть MainActivity через Intent
              *   http://developer.alexanderklimov.ru/android/theory/intent.php
              */
         } else {
